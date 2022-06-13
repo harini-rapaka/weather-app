@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/img"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:text="Weather App"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/City"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter City Name"
+            android:inputType="textPersonName"
+            android:ems="10"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Country"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Enter the Country Code(Optional)"
+            android:inputType="textPersonName"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Get"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:onClick="getWeatherDetails"
+            android:text="Get Details"
+            android:backgroundTint="@null"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:textColor="@color/black"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Result"/>
+                //android:background="@color/black"/>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
